@@ -37,7 +37,7 @@ Credentials are never committed. Copy `.env.example` to a private `.env` file if
 - [x] Neon schema and idempotent seeder
 - [x] Event injection design
 - [x] Unified run telemetry schema
-- [ ] Neon project authorization and provisioning
+- [x] Neon project provisioned in Frankfurt and seeded (project `solitary-credit-82809008`)
 - [ ] HubSpot developer/test account
 - [ ] Stripe test-mode account
 - [ ] Support-system selection and account
@@ -47,3 +47,9 @@ Credentials are never committed. Copy `.env.example` to a private `.env` file if
 - [ ] Scored runs and report
 
 See [METHODOLOGY.md](METHODOLOGY.md) and [protocol/preregistration.yaml](protocol/preregistration.yaml).
+
+## Provisioned reference environment
+
+The first reference Neon environment uses PostgreSQL 18 in AWS Europe Central 1
+(Frankfurt). Its production branch contains 120 accounts, 120 identity mappings,
+and 42,000 product events. Credentials remain private and are not committed.

@@ -1,0 +1,13 @@
+{
+  "dataset_version": "0.1.0",
+  "seed": 20260914,
+  "incidents": [
+    {
+      "id": "incident_usage_collapse",
+      "starts_at": "2026-08-05T00:00:00+00:00",
+      "affected_segment": "Enterprise",
+      "affected_condition": "account ordinal divisible by 4",
+      "expected_root_cause": "bulk_export cohort product usage collapse"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+tasks:
+  - id: S01
+    category: single_source
+    prompt: What was recognized subscription revenue in July 2026, excluding refunded invoices?
+    answer_key: answers/S01.json
+  - id: X01
+    category: cross_source
+    prompt: Which customer segment explains the increase in refunds, and what evidence supports the conclusion?
+    answer_key: answers/X01.json
+  - id: X02
+    category: cross_source
+    prompt: Which closed-won deals do not have a corresponding active subscription, and what is their total expected MRR?
+    answer_key: answers/X02.json
+  - id: R01
+    category: root_cause
+    prompt: Why did weekly active usage fall even though the number of paying customers was stable?
+    answer_key: answers/R01.json
+  - id: F01
+    category: freshness
+    prompt: How many active Enterprise customers have had no product activity in the last seven days?
+    answer_key: answers/F01.json
+  - id: A01
+    category: autonomous
+    prompt: null
+    incident_id: incident_refund_spike
+    answer_key: answers/A01.json

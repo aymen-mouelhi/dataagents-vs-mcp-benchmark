@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Benchmark run telemetry",
+  "type": "object",
+  "required": ["run_id", "system_id", "task_id", "started_at", "finished_at", "status"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "system_id": {"enum": ["da", "cc_raw", "cc_wh"]},
+    "task_id": {"type": "string"},
+    "session_temperature": {"enum": ["cold", "warm"]},
+    "started_at": {"type": "string", "format": "date-time"},
+    "first_useful_output_at": {"type": ["string", "null"], "format": "date-time"},
+    "finished_at": {"type": "string", "format": "date-time"},
+    "status": {"enum": ["ok", "timeout", "error", "refused"]},
+    "model": {"type": "string"},
+    "model_input_tokens": {"type": "integer", "minimum": 0},
+    "model_output_tokens": {"type": "integer", "minimum": 0},
+    "cache_write_tokens": {"type": "integer", "minimum": 0},
+    "cache_read_tokens": {"type": "integer", "minimum": 0},
+    "agent_turns": {"type": "integer", "minimum": 0},
+    "tool_calls": {"type": "array", "items": {"$ref": "#/$defs/tool_call"}},
+    "source_api_requests": {"type": "integer", "minimum": 0},
+    "source_rows_returned": {"type": "integer", "minimum": 0},
+    "source_bytes_returned": {"type": "integer", "minimum": 0},
+    "model_cost_usd": {"type": "number", "minimum": 0},
+    "infra_cost_usd": {"type": "number", "minimum": 0},
+    "answer_text": {"type": "string"},
+    "evidence": {"type": "array", "items": {"type": "object"}},
+    "error": {"type": ["string", "null"]}
+  },
+  "$defs": {
+    "tool_call": {
+      "type": "object",
+      "required": ["name", "started_at", "finished_at", "status"],
+      "properties": {
+        "name": {"type": "string"},
+        "source": {"type": "string"},
+        "started_at": {"type": "string", "format": "date-time"},
+        "finished_at": {"type": "string", "format": "date-time"},
+        "status": {"enum": ["ok", "error"]},
+        "rows": {"type": "integer", "minimum": 0},
+        "bytes": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}

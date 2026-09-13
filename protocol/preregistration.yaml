@@ -1,0 +1,55 @@
+protocol_version: 0.1.0-draft
+status: draft
+sponsor: DataAgents
+company_fixture: northstar_labs
+random_seed: 20260914
+
+systems:
+  - id: da
+    name: DataAgents
+    mode: managed_sync_transform_monitor
+  - id: cc_raw
+    name: Claude Code plus raw MCP
+    mode: source_direct
+  - id: cc_wh
+    name: Claude Code plus prepared warehouse
+    mode: engineered_control
+    optional: true
+
+sources:
+  - id: hubspot
+    domain: crm
+    planned_mode: developer_test_account
+  - id: stripe
+    domain: billing
+    planned_mode: test_mode
+  - id: neon
+    domain: product_usage
+    planned_mode: postgres
+  - id: support
+    domain: support
+    planned_mode: to_be_frozen
+
+run_design:
+  repetitions_per_task_per_system: 10
+  cold_repetitions: 5
+  warm_repetitions: 5
+  timeout_seconds: 300
+  randomize_order: true
+  preserve_failures: true
+
+primary_metrics:
+  - conclusion_correct
+  - wall_clock_ms
+  - marginal_cost_usd
+  - autonomous_detection_within_sla
+
+freeze_requirements:
+  - task_prompts
+  - ground_truth_and_tolerances
+  - source_snapshots_and_hashes
+  - model_ids
+  - mcp_server_names_and_versions
+  - system_prompts
+  - price_sheet
+  - exclusion_rules

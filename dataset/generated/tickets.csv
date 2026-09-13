@@ -1,171 +1,41 @@
 ticket_id,requester_email,account_id,subject,category,priority,status,created_at
 ticket_0001_00,finance@customer-1.example,acct_0001,How to configure alerts,configuration,normal,open,2026-08-04T01:00:00+00:00
-ticket_0002_00,finance@customer-2.example,acct_0002,How to configure alerts,configuration,normal,open,2026-08-04T02:00:00+00:00
-ticket_0003_00,finance@customer-3.example,acct_0003,How to configure alerts,configuration,normal,open,2026-08-04T03:00:00+00:00
-ticket_0004_00,finance@customer-4.example,acct_0004,How to configure alerts,configuration,normal,open,2026-08-04T04:00:00+00:00
-ticket_0005_00,finance@customer-5.example,acct_0005,How to configure alerts,configuration,normal,open,2026-08-04T05:00:00+00:00
-ticket_0006_00,finance@customer-6.example,acct_0006,How to configure alerts,configuration,normal,open,2026-08-04T06:00:00+00:00
-ticket_0007_00,finance@customer-7.example,acct_0007,How to configure alerts,configuration,normal,open,2026-08-04T07:00:00+00:00
-ticket_0008_00,finance@customer-8.example,acct_0008,How to configure alerts,configuration,normal,open,2026-08-04T08:00:00+00:00
-ticket_0009_00,finance@customer-9.example,acct_0009,How to configure alerts,configuration,normal,open,2026-08-04T09:00:00+00:00
-ticket_0010_00,finance@customer-10.example,acct_0010,How to configure alerts,configuration,normal,open,2026-08-04T10:00:00+00:00
-ticket_0011_00,finance@customer-11.example,acct_0011,How to configure alerts,configuration,normal,open,2026-08-04T11:00:00+00:00
 ticket_0012_00,finance@customer-12.example,acct_0012,Bulk export fails,bulk_export,high,open,2026-08-04T00:00:00+00:00
 ticket_0012_01,finance@customer-12.example,acct_0012,Bulk export fails,bulk_export,high,solved,2026-08-05T00:00:00+00:00
 ticket_0012_02,finance@customer-12.example,acct_0012,Bulk export fails,bulk_export,high,open,2026-08-06T00:00:00+00:00
-ticket_0012_03,finance@customer-12.example,acct_0012,Bulk export fails,bulk_export,high,solved,2026-08-07T00:00:00+00:00
-ticket_0012_04,finance@customer-12.example,acct_0012,Bulk export fails,bulk_export,high,open,2026-08-08T00:00:00+00:00
-ticket_0012_05,finance@customer-12.example,acct_0012,Bulk export fails,bulk_export,high,solved,2026-08-09T00:00:00+00:00
 ticket_0013_00,finance@customer-13.example,acct_0013,How to configure alerts,configuration,normal,open,2026-08-04T01:00:00+00:00
-ticket_0014_00,finance@customer-14.example,acct_0014,How to configure alerts,configuration,normal,open,2026-08-04T02:00:00+00:00
-ticket_0015_00,finance@customer-15.example,acct_0015,How to configure alerts,configuration,normal,open,2026-08-04T03:00:00+00:00
-ticket_0016_00,finance@customer-16.example,acct_0016,How to configure alerts,configuration,normal,open,2026-08-04T04:00:00+00:00
-ticket_0017_00,finance@customer-17.example,acct_0017,How to configure alerts,configuration,normal,open,2026-08-04T05:00:00+00:00
-ticket_0018_00,finance@customer-18.example,acct_0018,How to configure alerts,configuration,normal,open,2026-08-04T06:00:00+00:00
-ticket_0019_00,finance@customer-19.example,acct_0019,How to configure alerts,configuration,normal,open,2026-08-04T07:00:00+00:00
-ticket_0020_00,finance@customer-20.example,acct_0020,How to configure alerts,configuration,normal,open,2026-08-04T08:00:00+00:00
-ticket_0021_00,finance@customer-21.example,acct_0021,How to configure alerts,configuration,normal,open,2026-08-04T09:00:00+00:00
-ticket_0022_00,finance@customer-22.example,acct_0022,How to configure alerts,configuration,normal,open,2026-08-04T10:00:00+00:00
-ticket_0023_00,finance@customer-23.example,acct_0023,How to configure alerts,configuration,normal,open,2026-08-04T11:00:00+00:00
 ticket_0024_00,finance@customer-24.example,acct_0024,Bulk export fails,bulk_export,high,open,2026-08-04T00:00:00+00:00
 ticket_0024_01,finance@customer-24.example,acct_0024,Bulk export fails,bulk_export,high,solved,2026-08-05T00:00:00+00:00
 ticket_0024_02,finance@customer-24.example,acct_0024,Bulk export fails,bulk_export,high,open,2026-08-06T00:00:00+00:00
-ticket_0024_03,finance@customer-24.example,acct_0024,Bulk export fails,bulk_export,high,solved,2026-08-07T00:00:00+00:00
-ticket_0024_04,finance@customer-24.example,acct_0024,Bulk export fails,bulk_export,high,open,2026-08-08T00:00:00+00:00
-ticket_0024_05,finance@customer-24.example,acct_0024,Bulk export fails,bulk_export,high,solved,2026-08-09T00:00:00+00:00
 ticket_0025_00,finance@customer-25.example,acct_0025,How to configure alerts,configuration,normal,open,2026-08-04T01:00:00+00:00
-ticket_0026_00,finance@customer-26.example,acct_0026,How to configure alerts,configuration,normal,open,2026-08-04T02:00:00+00:00
-ticket_0027_00,finance@customer-27.example,acct_0027,How to configure alerts,configuration,normal,open,2026-08-04T03:00:00+00:00
-ticket_0028_00,finance@customer-28.example,acct_0028,How to configure alerts,configuration,normal,open,2026-08-04T04:00:00+00:00
-ticket_0029_00,finance@customer-29.example,acct_0029,How to configure alerts,configuration,normal,open,2026-08-04T05:00:00+00:00
-ticket_0030_00,finance@customer-30.example,acct_0030,How to configure alerts,configuration,normal,open,2026-08-04T06:00:00+00:00
-ticket_0031_00,finance@customer-31.example,acct_0031,How to configure alerts,configuration,normal,open,2026-08-04T07:00:00+00:00
-ticket_0032_00,finance@customer-32.example,acct_0032,How to configure alerts,configuration,normal,open,2026-08-04T08:00:00+00:00
-ticket_0033_00,finance@customer-33.example,acct_0033,How to configure alerts,configuration,normal,open,2026-08-04T09:00:00+00:00
-ticket_0034_00,finance@customer-34.example,acct_0034,How to configure alerts,configuration,normal,open,2026-08-04T10:00:00+00:00
-ticket_0035_00,finance@customer-35.example,acct_0035,How to configure alerts,configuration,normal,open,2026-08-04T11:00:00+00:00
 ticket_0036_00,finance@customer-36.example,acct_0036,Bulk export fails,bulk_export,high,open,2026-08-04T00:00:00+00:00
 ticket_0036_01,finance@customer-36.example,acct_0036,Bulk export fails,bulk_export,high,solved,2026-08-05T00:00:00+00:00
 ticket_0036_02,finance@customer-36.example,acct_0036,Bulk export fails,bulk_export,high,open,2026-08-06T00:00:00+00:00
-ticket_0036_03,finance@customer-36.example,acct_0036,Bulk export fails,bulk_export,high,solved,2026-08-07T00:00:00+00:00
-ticket_0036_04,finance@customer-36.example,acct_0036,Bulk export fails,bulk_export,high,open,2026-08-08T00:00:00+00:00
-ticket_0036_05,finance@customer-36.example,acct_0036,Bulk export fails,bulk_export,high,solved,2026-08-09T00:00:00+00:00
 ticket_0037_00,finance@customer-37.example,acct_0037,How to configure alerts,configuration,normal,open,2026-08-04T01:00:00+00:00
-ticket_0038_00,finance@customer-38.example,acct_0038,How to configure alerts,configuration,normal,open,2026-08-04T02:00:00+00:00
-ticket_0039_00,finance@customer-39.example,acct_0039,How to configure alerts,configuration,normal,open,2026-08-04T03:00:00+00:00
-ticket_0040_00,finance@customer-40.example,acct_0040,How to configure alerts,configuration,normal,open,2026-08-04T04:00:00+00:00
-ticket_0041_00,finance@customer-41.example,acct_0041,How to configure alerts,configuration,normal,open,2026-08-04T05:00:00+00:00
-ticket_0042_00,finance@customer-42.example,acct_0042,How to configure alerts,configuration,normal,open,2026-08-04T06:00:00+00:00
-ticket_0043_00,finance@customer-43.example,acct_0043,How to configure alerts,configuration,normal,open,2026-08-04T07:00:00+00:00
-ticket_0044_00,finance@customer-44.example,acct_0044,How to configure alerts,configuration,normal,open,2026-08-04T08:00:00+00:00
-ticket_0045_00,finance@customer-45.example,acct_0045,How to configure alerts,configuration,normal,open,2026-08-04T09:00:00+00:00
-ticket_0046_00,finance@customer-46.example,acct_0046,How to configure alerts,configuration,normal,open,2026-08-04T10:00:00+00:00
-ticket_0047_00,finance@customer-47.example,acct_0047,How to configure alerts,configuration,normal,open,2026-08-04T11:00:00+00:00
 ticket_0048_00,finance@customer-48.example,acct_0048,Bulk export fails,bulk_export,high,open,2026-08-04T00:00:00+00:00
 ticket_0048_01,finance@customer-48.example,acct_0048,Bulk export fails,bulk_export,high,solved,2026-08-05T00:00:00+00:00
 ticket_0048_02,finance@customer-48.example,acct_0048,Bulk export fails,bulk_export,high,open,2026-08-06T00:00:00+00:00
-ticket_0048_03,finance@customer-48.example,acct_0048,Bulk export fails,bulk_export,high,solved,2026-08-07T00:00:00+00:00
-ticket_0048_04,finance@customer-48.example,acct_0048,Bulk export fails,bulk_export,high,open,2026-08-08T00:00:00+00:00
-ticket_0048_05,finance@customer-48.example,acct_0048,Bulk export fails,bulk_export,high,solved,2026-08-09T00:00:00+00:00
 ticket_0049_00,finance@customer-49.example,acct_0049,How to configure alerts,configuration,normal,open,2026-08-04T01:00:00+00:00
-ticket_0050_00,finance@customer-50.example,acct_0050,How to configure alerts,configuration,normal,open,2026-08-04T02:00:00+00:00
-ticket_0051_00,finance@customer-51.example,acct_0051,How to configure alerts,configuration,normal,open,2026-08-04T03:00:00+00:00
-ticket_0052_00,finance@customer-52.example,acct_0052,How to configure alerts,configuration,normal,open,2026-08-04T04:00:00+00:00
-ticket_0053_00,finance@customer-53.example,acct_0053,How to configure alerts,configuration,normal,open,2026-08-04T05:00:00+00:00
-ticket_0054_00,finance@customer-54.example,acct_0054,How to configure alerts,configuration,normal,open,2026-08-04T06:00:00+00:00
-ticket_0055_00,finance@customer-55.example,acct_0055,How to configure alerts,configuration,normal,open,2026-08-04T07:00:00+00:00
-ticket_0056_00,finance@customer-56.example,acct_0056,How to configure alerts,configuration,normal,open,2026-08-04T08:00:00+00:00
-ticket_0057_00,finance@customer-57.example,acct_0057,How to configure alerts,configuration,normal,open,2026-08-04T09:00:00+00:00
-ticket_0058_00,finance@customer-58.example,acct_0058,How to configure alerts,configuration,normal,open,2026-08-04T10:00:00+00:00
-ticket_0059_00,finance@customer-59.example,acct_0059,How to configure alerts,configuration,normal,open,2026-08-04T11:00:00+00:00
 ticket_0060_00,finance@customer-60.example,acct_0060,Bulk export fails,bulk_export,high,open,2026-08-04T00:00:00+00:00
 ticket_0060_01,finance@customer-60.example,acct_0060,Bulk export fails,bulk_export,high,solved,2026-08-05T00:00:00+00:00
 ticket_0060_02,finance@customer-60.example,acct_0060,Bulk export fails,bulk_export,high,open,2026-08-06T00:00:00+00:00
-ticket_0060_03,finance@customer-60.example,acct_0060,Bulk export fails,bulk_export,high,solved,2026-08-07T00:00:00+00:00
-ticket_0060_04,finance@customer-60.example,acct_0060,Bulk export fails,bulk_export,high,open,2026-08-08T00:00:00+00:00
-ticket_0060_05,finance@customer-60.example,acct_0060,Bulk export fails,bulk_export,high,solved,2026-08-09T00:00:00+00:00
 ticket_0061_00,finance@customer-61.example,acct_0061,How to configure alerts,configuration,normal,open,2026-08-04T01:00:00+00:00
-ticket_0062_00,finance@customer-62.example,acct_0062,How to configure alerts,configuration,normal,open,2026-08-04T02:00:00+00:00
-ticket_0063_00,finance@customer-63.example,acct_0063,How to configure alerts,configuration,normal,open,2026-08-04T03:00:00+00:00
-ticket_0064_00,finance@customer-64.example,acct_0064,How to configure alerts,configuration,normal,open,2026-08-04T04:00:00+00:00
-ticket_0065_00,finance@customer-65.example,acct_0065,How to configure alerts,configuration,normal,open,2026-08-04T05:00:00+00:00
-ticket_0066_00,finance@customer-66.example,acct_0066,How to configure alerts,configuration,normal,open,2026-08-04T06:00:00+00:00
-ticket_0067_00,finance@customer-67.example,acct_0067,How to configure alerts,configuration,normal,open,2026-08-04T07:00:00+00:00
-ticket_0068_00,finance@customer-68.example,acct_0068,How to configure alerts,configuration,normal,open,2026-08-04T08:00:00+00:00
-ticket_0069_00,finance@customer-69.example,acct_0069,How to configure alerts,configuration,normal,open,2026-08-04T09:00:00+00:00
-ticket_0070_00,finance@customer-70.example,acct_0070,How to configure alerts,configuration,normal,open,2026-08-04T10:00:00+00:00
-ticket_0071_00,finance@customer-71.example,acct_0071,How to configure alerts,configuration,normal,open,2026-08-04T11:00:00+00:00
 ticket_0072_00,finance@customer-72.example,acct_0072,Bulk export fails,bulk_export,high,open,2026-08-04T00:00:00+00:00
 ticket_0072_01,finance@customer-72.example,acct_0072,Bulk export fails,bulk_export,high,solved,2026-08-05T00:00:00+00:00
 ticket_0072_02,finance@customer-72.example,acct_0072,Bulk export fails,bulk_export,high,open,2026-08-06T00:00:00+00:00
-ticket_0072_03,finance@customer-72.example,acct_0072,Bulk export fails,bulk_export,high,solved,2026-08-07T00:00:00+00:00
-ticket_0072_04,finance@customer-72.example,acct_0072,Bulk export fails,bulk_export,high,open,2026-08-08T00:00:00+00:00
-ticket_0072_05,finance@customer-72.example,acct_0072,Bulk export fails,bulk_export,high,solved,2026-08-09T00:00:00+00:00
 ticket_0073_00,finance@customer-73.example,acct_0073,How to configure alerts,configuration,normal,open,2026-08-04T01:00:00+00:00
-ticket_0074_00,finance@customer-74.example,acct_0074,How to configure alerts,configuration,normal,open,2026-08-04T02:00:00+00:00
-ticket_0075_00,finance@customer-75.example,acct_0075,How to configure alerts,configuration,normal,open,2026-08-04T03:00:00+00:00
-ticket_0076_00,finance@customer-76.example,acct_0076,How to configure alerts,configuration,normal,open,2026-08-04T04:00:00+00:00
-ticket_0077_00,finance@customer-77.example,acct_0077,How to configure alerts,configuration,normal,open,2026-08-04T05:00:00+00:00
-ticket_0078_00,finance@customer-78.example,acct_0078,How to configure alerts,configuration,normal,open,2026-08-04T06:00:00+00:00
-ticket_0079_00,finance@customer-79.example,acct_0079,How to configure alerts,configuration,normal,open,2026-08-04T07:00:00+00:00
-ticket_0080_00,finance@customer-80.example,acct_0080,How to configure alerts,configuration,normal,open,2026-08-04T08:00:00+00:00
-ticket_0081_00,finance@customer-81.example,acct_0081,How to configure alerts,configuration,normal,open,2026-08-04T09:00:00+00:00
-ticket_0082_00,finance@customer-82.example,acct_0082,How to configure alerts,configuration,normal,open,2026-08-04T10:00:00+00:00
-ticket_0083_00,finance@customer-83.example,acct_0083,How to configure alerts,configuration,normal,open,2026-08-04T11:00:00+00:00
 ticket_0084_00,finance@customer-84.example,acct_0084,Bulk export fails,bulk_export,high,open,2026-08-04T00:00:00+00:00
 ticket_0084_01,finance@customer-84.example,acct_0084,Bulk export fails,bulk_export,high,solved,2026-08-05T00:00:00+00:00
 ticket_0084_02,finance@customer-84.example,acct_0084,Bulk export fails,bulk_export,high,open,2026-08-06T00:00:00+00:00
-ticket_0084_03,finance@customer-84.example,acct_0084,Bulk export fails,bulk_export,high,solved,2026-08-07T00:00:00+00:00
-ticket_0084_04,finance@customer-84.example,acct_0084,Bulk export fails,bulk_export,high,open,2026-08-08T00:00:00+00:00
-ticket_0084_05,finance@customer-84.example,acct_0084,Bulk export fails,bulk_export,high,solved,2026-08-09T00:00:00+00:00
 ticket_0085_00,finance@customer-85.example,acct_0085,How to configure alerts,configuration,normal,open,2026-08-04T01:00:00+00:00
-ticket_0086_00,finance@customer-86.example,acct_0086,How to configure alerts,configuration,normal,open,2026-08-04T02:00:00+00:00
-ticket_0087_00,finance@customer-87.example,acct_0087,How to configure alerts,configuration,normal,open,2026-08-04T03:00:00+00:00
-ticket_0088_00,finance@customer-88.example,acct_0088,How to configure alerts,configuration,normal,open,2026-08-04T04:00:00+00:00
-ticket_0089_00,finance@customer-89.example,acct_0089,How to configure alerts,configuration,normal,open,2026-08-04T05:00:00+00:00
-ticket_0090_00,finance@customer-90.example,acct_0090,How to configure alerts,configuration,normal,open,2026-08-04T06:00:00+00:00
-ticket_0091_00,finance@customer-91.example,acct_0091,How to configure alerts,configuration,normal,open,2026-08-04T07:00:00+00:00
-ticket_0092_00,finance@customer-92.example,acct_0092,How to configure alerts,configuration,normal,open,2026-08-04T08:00:00+00:00
-ticket_0093_00,finance@customer-93.example,acct_0093,How to configure alerts,configuration,normal,open,2026-08-04T09:00:00+00:00
-ticket_0094_00,finance@customer-94.example,acct_0094,How to configure alerts,configuration,normal,open,2026-08-04T10:00:00+00:00
-ticket_0095_00,finance@customer-95.example,acct_0095,How to configure alerts,configuration,normal,open,2026-08-04T11:00:00+00:00
 ticket_0096_00,finance@customer-96.example,acct_0096,Bulk export fails,bulk_export,high,open,2026-08-04T00:00:00+00:00
 ticket_0096_01,finance@customer-96.example,acct_0096,Bulk export fails,bulk_export,high,solved,2026-08-05T00:00:00+00:00
 ticket_0096_02,finance@customer-96.example,acct_0096,Bulk export fails,bulk_export,high,open,2026-08-06T00:00:00+00:00
-ticket_0096_03,finance@customer-96.example,acct_0096,Bulk export fails,bulk_export,high,solved,2026-08-07T00:00:00+00:00
-ticket_0096_04,finance@customer-96.example,acct_0096,Bulk export fails,bulk_export,high,open,2026-08-08T00:00:00+00:00
-ticket_0096_05,finance@customer-96.example,acct_0096,Bulk export fails,bulk_export,high,solved,2026-08-09T00:00:00+00:00
 ticket_0097_00,finance@customer-97.example,acct_0097,How to configure alerts,configuration,normal,open,2026-08-04T01:00:00+00:00
-ticket_0098_00,finance@customer-98.example,acct_0098,How to configure alerts,configuration,normal,open,2026-08-04T02:00:00+00:00
-ticket_0099_00,finance@customer-99.example,acct_0099,How to configure alerts,configuration,normal,open,2026-08-04T03:00:00+00:00
-ticket_0100_00,finance@customer-100.example,acct_0100,How to configure alerts,configuration,normal,open,2026-08-04T04:00:00+00:00
-ticket_0101_00,finance@customer-101.example,acct_0101,How to configure alerts,configuration,normal,open,2026-08-04T05:00:00+00:00
-ticket_0102_00,finance@customer-102.example,acct_0102,How to configure alerts,configuration,normal,open,2026-08-04T06:00:00+00:00
-ticket_0103_00,finance@customer-103.example,acct_0103,How to configure alerts,configuration,normal,open,2026-08-04T07:00:00+00:00
-ticket_0104_00,finance@customer-104.example,acct_0104,How to configure alerts,configuration,normal,open,2026-08-04T08:00:00+00:00
-ticket_0105_00,finance@customer-105.example,acct_0105,How to configure alerts,configuration,normal,open,2026-08-04T09:00:00+00:00
-ticket_0106_00,finance@customer-106.example,acct_0106,How to configure alerts,configuration,normal,open,2026-08-04T10:00:00+00:00
-ticket_0107_00,finance@customer-107.example,acct_0107,How to configure alerts,configuration,normal,open,2026-08-04T11:00:00+00:00
 ticket_0108_00,finance@customer-108.example,acct_0108,Bulk export fails,bulk_export,high,open,2026-08-04T00:00:00+00:00
 ticket_0108_01,finance@customer-108.example,acct_0108,Bulk export fails,bulk_export,high,solved,2026-08-05T00:00:00+00:00
 ticket_0108_02,finance@customer-108.example,acct_0108,Bulk export fails,bulk_export,high,open,2026-08-06T00:00:00+00:00
-ticket_0108_03,finance@customer-108.example,acct_0108,Bulk export fails,bulk_export,high,solved,2026-08-07T00:00:00+00:00
-ticket_0108_04,finance@customer-108.example,acct_0108,Bulk export fails,bulk_export,high,open,2026-08-08T00:00:00+00:00
-ticket_0108_05,finance@customer-108.example,acct_0108,Bulk export fails,bulk_export,high,solved,2026-08-09T00:00:00+00:00
 ticket_0109_00,finance@customer-109.example,acct_0109,How to configure alerts,configuration,normal,open,2026-08-04T01:00:00+00:00
-ticket_0110_00,finance@customer-110.example,acct_0110,How to configure alerts,configuration,normal,open,2026-08-04T02:00:00+00:00
-ticket_0111_00,finance@customer-111.example,acct_0111,How to configure alerts,configuration,normal,open,2026-08-04T03:00:00+00:00
-ticket_0112_00,finance@customer-112.example,acct_0112,How to configure alerts,configuration,normal,open,2026-08-04T04:00:00+00:00
-ticket_0113_00,finance@customer-113.example,acct_0113,How to configure alerts,configuration,normal,open,2026-08-04T05:00:00+00:00
-ticket_0114_00,finance@customer-114.example,acct_0114,How to configure alerts,configuration,normal,open,2026-08-04T06:00:00+00:00
-ticket_0115_00,finance@customer-115.example,acct_0115,How to configure alerts,configuration,normal,open,2026-08-04T07:00:00+00:00
-ticket_0116_00,finance@customer-116.example,acct_0116,How to configure alerts,configuration,normal,open,2026-08-04T08:00:00+00:00
-ticket_0117_00,finance@customer-117.example,acct_0117,How to configure alerts,configuration,normal,open,2026-08-04T09:00:00+00:00
-ticket_0118_00,finance@customer-118.example,acct_0118,How to configure alerts,configuration,normal,open,2026-08-04T10:00:00+00:00
-ticket_0119_00,finance@customer-119.example,acct_0119,How to configure alerts,configuration,normal,open,2026-08-04T11:00:00+00:00
 ticket_0120_00,finance@customer-120.example,acct_0120,Bulk export fails,bulk_export,high,open,2026-08-04T00:00:00+00:00
 ticket_0120_01,finance@customer-120.example,acct_0120,Bulk export fails,bulk_export,high,solved,2026-08-05T00:00:00+00:00
 ticket_0120_02,finance@customer-120.example,acct_0120,Bulk export fails,bulk_export,high,open,2026-08-06T00:00:00+00:00
-ticket_0120_03,finance@customer-120.example,acct_0120,Bulk export fails,bulk_export,high,solved,2026-08-07T00:00:00+00:00
-ticket_0120_04,finance@customer-120.example,acct_0120,Bulk export fails,bulk_export,high,open,2026-08-08T00:00:00+00:00
-ticket_0120_05,finance@customer-120.example,acct_0120,Bulk export fails,bulk_export,high,solved,2026-08-09T00:00:00+00:00

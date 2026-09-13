@@ -87,15 +87,15 @@ def main():
                 "refunded_cents": mrr if refunded else 0,
                 "status": "paid",
             })
-        ticket_count = 6 if segment == "Enterprise" and i % 4 == 0 else 1
+        ticket_count = 3 if i % 12 == 0 else (1 if i % 12 == 1 else 0)
         for ticket_no in range(ticket_count):
             tickets.append({
                 "ticket_id": f"ticket_{i:04d}_{ticket_no:02d}",
                 "requester_email": f"finance@{domain}",
                 "account_id": account_id,
-                "subject": "Bulk export fails" if ticket_count > 1 else "How to configure alerts",
-                "category": "bulk_export" if ticket_count > 1 else "configuration",
-                "priority": "high" if ticket_count > 1 else "normal",
+                "subject": "Bulk export fails" if i % 12 == 0 else "How to configure alerts",
+                "category": "bulk_export" if i % 12 == 0 else "configuration",
+                "priority": "high" if i % 12 == 0 else "normal",
                 "status": "open" if ticket_no % 2 == 0 else "solved",
                 "created_at": (BASE + timedelta(days=34 + ticket_no, hours=i % 12)).isoformat(),
             })

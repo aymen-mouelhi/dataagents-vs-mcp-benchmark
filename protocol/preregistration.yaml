@@ -28,7 +28,7 @@ sources:
     planned_mode: postgres
   - id: support
     domain: support
-    planned_mode: to_be_frozen
+    planned_mode: public_github_issues_fixture
 
 run_design:
   repetitions_per_task_per_system: 10
@@ -37,6 +37,8 @@ run_design:
   timeout_seconds: 300
   randomize_order: true
   preserve_failures: true
+  source_filters:
+    github_support: "repo:aymen-mouelhi/northstar-labs-support-fixture state:open"
 
 primary_metrics:
   - conclusion_correct

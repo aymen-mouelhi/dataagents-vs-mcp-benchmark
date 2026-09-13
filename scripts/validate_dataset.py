@@ -27,7 +27,7 @@ def main():
     assert len(deals) == 120
     assert len(subscriptions) == 117
     assert len(invoices) == 240
-    assert len(tickets) == 170
+    assert len(tickets) == 40
     subscribed = {r["account_id"] for r in subscriptions}
     assert {r["account_id"] for r in deals} - subscribed == {"acct_0017", "acct_0053", "acct_0101"}
     refund_accounts = {r["account_id"] for r in invoices if int(r["refunded_cents"]) > 0}

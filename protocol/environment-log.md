@@ -16,3 +16,23 @@ This file records externally provisioned benchmark infrastructure without secret
 - Query execution time reported by Neon for bootstrap batch: 43 ms
 
 Database credentials and provider-generated passwords are excluded from git.
+
+## 2026-09-14 - Stripe
+
+- Existing sandbox located: `Revydo sandbox`
+- Dashboard account ID: `acct_1UBaBvDhuRdfwuUP`
+- No live-mode operations are permitted by the seeder
+- Test clocks excluded from the primary corpus because they cap simulations at
+  three customers and omit generated invoices from ordinary unscoped lists
+- Seeding pending a new restricted sandbox credential or Stripe MCP OAuth grant
+
+## 2026-09-14 - Support source
+
+- Provider: GitHub Issues
+- Repository: `aymen-mouelhi/northstar-labs-support-fixture`
+- Visibility: public
+- Canonical open issues: 40
+- Incident/control split: 30 bulk-export incident tickets, 10 configuration controls
+- Canonical identifiers and source timestamps are embedded in every issue body
+- Nineteen duplicate issues caused by an interrupted first seeding pass were
+  closed immediately and are excluded by the frozen `state=open` source filter

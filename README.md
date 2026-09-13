@@ -48,7 +48,7 @@ fresh immutable run ID. Test the harness without contacting a model:
 - [x] Neon project provisioned in Frankfurt and seeded (project `solitary-credit-82809008`)
 - [ ] HubSpot developer/test account
 - [ ] Stripe test-mode account
-- [ ] Support-system selection and account
+- [x] Support source selected: public GitHub Issues fixture
 - [ ] DataAgents adapter
 - [x] Claude Code MCP configuration and raw-event runner
 - [ ] Pilot runs and protocol freeze
@@ -61,3 +61,7 @@ See [METHODOLOGY.md](METHODOLOGY.md) and [protocol/preregistration.yaml](protoco
 The first reference Neon environment uses PostgreSQL 18 in AWS Europe Central 1
 (Frankfurt). Its production branch contains 120 accounts, 120 identity mappings,
 and 42,000 product events. Credentials remain private and are not committed.
+
+The support fixture is publicly inspectable at
+[`aymen-mouelhi/northstar-labs-support-fixture`](https://github.com/aymen-mouelhi/northstar-labs-support-fixture).
+Only open issues belong to the scored corpus.

@@ -29,6 +29,14 @@ export BENCHMARK_DATABASE_URL='postgresql://...'
 
 Credentials are never committed. Copy `.env.example` to a private `.env` file if desired.
 
+Claude Code source MCP endpoints are declared in `.mcp.json`. Each scored run
+uses `--strict-mcp-config`, an exact model ID, verbose stream-JSON output, and a
+fresh immutable run ID. Test the harness without contacting a model:
+
+```bash
+.venv/bin/python scripts/run_claude.py S01 --model EXACT_MODEL_ID --temperature cold --dry-run
+```
+
 ## Current status
 
 - [x] Protocol and fairness rules
@@ -42,7 +50,7 @@ Credentials are never committed. Copy `.env.example` to a private `.env` file if
 - [ ] Stripe test-mode account
 - [ ] Support-system selection and account
 - [ ] DataAgents adapter
-- [ ] Claude Code MCP configuration and runner
+- [x] Claude Code MCP configuration and raw-event runner
 - [ ] Pilot runs and protocol freeze
 - [ ] Scored runs and report
 

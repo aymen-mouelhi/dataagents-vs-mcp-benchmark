@@ -38,7 +38,7 @@
 - Seeder and safety gates are ready.
 - Intentionally not performed: seeding awaits a new restricted test credential or explicit Stripe MCP OAuth authorization.
 
-### CRM — account created, seeding pending
+### CRM — passed
 
 - HubSpot developer environment creation requires physical passkey/2FA interaction.
 - Pipedrive trial registration was submitted for the sponsor's work email.
@@ -48,7 +48,11 @@
 - Created workspace: `Northstar Labs Benchmark`.
 - Company domain: `northstarlabsbenchmark`.
 - Verified that the workspace contains no sample deals.
-- No CRM fixture records have been created; seeding awaits API or MCP write access.
+- Seeded through the idempotent API harness without exposing or committing the token.
+- Verified through the API: 120 organizations, 120 people, and 120 deals.
+- Verified through the refreshed Pipedrive UI: 120 people.
+- Pipedrive native MCP is available in workspace settings; Claude authorization
+  remains intentionally separate from fixture seeding.
 
 ## Defects
 
@@ -67,6 +71,9 @@ None filed. The CRM result is an external authentication/provisioning block, not
   the sponsor's normal Chrome profile.
 - One non-blocking Pipedrive console warning was observed:
   `tracking-utilities: Sesheta is not a proper object`.
+- The contact-list UI initially displayed a stale zero count immediately after
+  API seeding, then displayed 120 after a page refresh. The direct API already
+  reported all three 120-record collections during the stale UI interval.
 
 ## Performance telemetry
 

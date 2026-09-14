@@ -46,7 +46,7 @@ fresh immutable run ID. Test the harness without contacting a model:
 - [x] Event injection design
 - [x] Unified run telemetry schema
 - [x] Neon project provisioned in Frankfurt and seeded (project `solitary-credit-82809008`)
-- [ ] Pipedrive trial created; deterministic seeding pending authorization
+- [x] Pipedrive trial seeded and verified (120 organizations, people, and deals)
 - [ ] Stripe test-mode account
 - [x] Support source selected: public GitHub Issues fixture
 - [ ] DataAgents adapter

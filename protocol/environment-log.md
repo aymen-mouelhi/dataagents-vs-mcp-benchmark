@@ -49,5 +49,8 @@ Database credentials and provider-generated passwords are excluded from git.
 - Workspace: `Northstar Labs Benchmark`
 - Company domain: `northstarlabsbenchmark`
 - No sample data or marketing opt-in was enabled
-- Workspace was verified empty; deterministic CRM seeding is pending an API
-  credential or MCP write authorization
+- Seed method: idempotent Pipedrive API seeder using a non-exported user token
+- Verified via API: 120 organizations, 120 people, 120 deals
+- Verified in UI after refresh: 120 people
+- Native MCP is available in the workspace and explicitly states that it can
+  query company data and create or update CRM records; Claude OAuth is pending

@@ -36,3 +36,12 @@ Database credentials and provider-generated passwords are excluded from git.
 - Canonical identifiers and source timestamps are embedded in every issue body
 - Nineteen duplicate issues caused by an interrupted first seeding pass were
   closed immediately and are excluded by the frozen `state=open` source filter
+
+## 2026-09-14 - CRM
+
+- HubSpot was attempted first but its existing account requires passkey/2FA
+  interaction before a developer environment can be created
+- Frozen fallback: Pipedrive trial with native MCP
+- Native MCP endpoint: `https://mcp.pipedrive.ai/mcp`
+- Trial signup submitted for the benchmark sponsor's work email
+- Workspace activation is pending the provider's email/login completion

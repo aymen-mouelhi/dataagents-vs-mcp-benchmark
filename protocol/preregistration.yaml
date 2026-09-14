@@ -17,9 +17,9 @@ systems:
     optional: true
 
 sources:
-  - id: hubspot
+  - id: pipedrive
     domain: crm
-    planned_mode: developer_test_account
+    planned_mode: trial_account_native_mcp
   - id: stripe
     domain: billing
     planned_mode: test_mode

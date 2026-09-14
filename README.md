@@ -5,7 +5,7 @@ An open, preregistered benchmark for measuring the operational value of a contin
 This repository deliberately separates:
 
 1. **Canonical truth** - deterministic business entities and injected incidents.
-2. **Source state** - the same entities distributed across Stripe, HubSpot, Neon PostgreSQL, and a support source.
+2. **Source state** - the same entities distributed across Stripe, Pipedrive, Neon PostgreSQL, and a support source.
 3. **System runs** - DataAgents, Claude Code with raw MCP, and an optional Claude Code + prepared warehouse control.
 4. **Evaluation** - correctness, traceability, latency, token use, tool calls, transferred records, setup effort, freshness, and total cost.
 
@@ -46,7 +46,7 @@ fresh immutable run ID. Test the harness without contacting a model:
 - [x] Event injection design
 - [x] Unified run telemetry schema
 - [x] Neon project provisioned in Frankfurt and seeded (project `solitary-credit-82809008`)
-- [ ] HubSpot developer/test account
+- [ ] Pipedrive trial activation and seeding
 - [ ] Stripe test-mode account
 - [x] Support source selected: public GitHub Issues fixture
 - [ ] DataAgents adapter

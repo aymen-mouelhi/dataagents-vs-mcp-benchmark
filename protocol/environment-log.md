@@ -44,6 +44,10 @@ Database credentials and provider-generated passwords are excluded from git.
 - Frozen fallback: Pipedrive trial with native MCP
 - Native MCP endpoint: `https://mcp.pipedrive.ai/mcp`
 - Trial signup submitted for the benchmark sponsor's work email
-- Pipedrive recognizes the work address at login, but Google login returns to
-  the login page and no activation/reset message is visible in the work mailbox
-- No CRM records have been created; workspace activation remains pending
+- Work-email signup was blocked by the provider's authentication flow
+- Trial created with the benchmark sponsor's explicitly authorized Google identity
+- Workspace: `Northstar Labs Benchmark`
+- Company domain: `northstarlabsbenchmark`
+- No sample data or marketing opt-in was enabled
+- Workspace was verified empty; deterministic CRM seeding is pending an API
+  credential or MCP write authorization

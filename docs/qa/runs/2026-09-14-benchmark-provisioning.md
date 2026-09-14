@@ -38,13 +38,17 @@
 - Seeder and safety gates are ready.
 - Intentionally not performed: seeding awaits a new restricted test credential or explicit Stripe MCP OAuth authorization.
 
-### CRM — blocked at authentication
+### CRM — account created, seeding pending
 
 - HubSpot developer environment creation requires physical passkey/2FA interaction.
 - Pipedrive trial registration was submitted for the sponsor's work email.
 - Pipedrive recognizes the address at login, but Google login returns to the login page and no activation/reset email is visible in the work mailbox, including spam/all-mail search.
-- A separate personal-Google OAuth path was opened but not approved because it would change the account identity from the work email.
-- No CRM records were created.
+- The sponsor explicitly authorized using their personal Google identity after the
+  work-email authentication block.
+- Created workspace: `Northstar Labs Benchmark`.
+- Company domain: `northstarlabsbenchmark`.
+- Verified that the workspace contains no sample deals.
+- No CRM fixture records have been created; seeding awaits API or MCP write access.
 
 ## Defects
 
@@ -59,6 +63,10 @@ None filed. The CRM result is an external authentication/provisioning block, not
 
 - No relevant browser console errors were captured.
 - Pipedrive work-account OAuth returned to the login route without a visible error.
+- Pipedrive personal-account OAuth and account creation completed successfully in
+  the sponsor's normal Chrome profile.
+- One non-blocking Pipedrive console warning was observed:
+  `tracking-utilities: Sesheta is not a proper object`.
 
 ## Performance telemetry
 

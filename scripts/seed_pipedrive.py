@@ -20,12 +20,13 @@ def read_csv(name):
 class Client:
     def __init__(self, domain, token):
         self.base = f"https://{domain}.pipedrive.com/api/v1"
-        self.params = {"api_token": token}
+        self.headers = {"x-api-token": token}
 
     def request(self, method, path, **kwargs):
         extra_params = kwargs.pop("params", {})
         response = requests.request(method, self.base + path,
-                                    params={**self.params, **extra_params}, timeout=30, **kwargs)
+                                    params=extra_params, headers=self.headers,
+                                    timeout=30, **kwargs)
         response.raise_for_status()
         payload = response.json()
         if not payload.get("success"):
@@ -33,9 +34,10 @@ class Client:
         time.sleep(0.06)
         return payload.get("data")
 
-    def exact_search(self, item_type, term):
+    def exact_search(self, item_type, term, field):
         data = self.request("GET", "/itemSearch", params={"term": term,
-                            "item_types": item_type, "fields": "name", "exact_match": "true", "limit": 10})
+                            "item_types": item_type, "fields": field,
+                            "exact_match": "true", "limit": 10})
         return data.get("items", []) if data else []
 
 
@@ -53,19 +55,18 @@ def main():
     for account in accounts:
         account_id = account["account_id"]
         org_name = account["company_name"]
-        org_hits = client.exact_search("organization", org_name)
+        org_hits = client.exact_search("organization", org_name, "name")
         if org_hits:
             org_id = org_hits[0]["item"]["id"]
         else:
             org = client.request("POST", "/organizations", json={
                 "name": org_name,
-                "label": account["segment"],
                 "visible_to": 3,
             })
             org_id = org["id"]
 
         contact = contacts[account_id]
-        person_hits = client.exact_search("person", contact["email"])
+        person_hits = client.exact_search("person", contact["email"], "email")
         if person_hits:
             person_id = person_hits[0]["item"]["id"]
         else:
@@ -79,7 +80,7 @@ def main():
 
         deal_fixture = deals[account_id]
         deal_title = f"Northstar subscription - {account_id}"
-        deal_hits = client.exact_search("deal", deal_title)
+        deal_hits = client.exact_search("deal", deal_title, "title")
         if deal_hits:
             deal_id = deal_hits[0]["item"]["id"]
         else:

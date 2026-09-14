@@ -43,6 +43,9 @@ Database credentials and provider-generated passwords are excluded from git.
 - Canonical identifiers and source timestamps are embedded in every issue body
 - Nineteen duplicate issues caused by an interrupted first seeding pass were
   closed immediately and are excluded by the frozen `state=open` source filter
+- Claude Code uses GitHub's official `/mcp/readonly` endpoint with only the
+  `repos,issues` toolsets and an existing GitHub CLI credential resolved in memory
+- Claude Code MCP health check: connected
 
 ## 2026-09-14 - CRM
 

@@ -31,7 +31,10 @@ Credentials are never committed. Copy `.env.example` to a private `.env` file if
 
 Claude Code source MCP endpoints are declared in `.mcp.json`. Each scored run
 uses `--strict-mcp-config`, an exact model ID, verbose stream-JSON output, and a
-fresh immutable run ID. Test the harness without contacting a model:
+fresh immutable run ID. The GitHub source uses the official read-only endpoint
+and only the `repos,issues` toolsets; the runner resolves an existing `gh`
+credential in memory or accepts `GITHUB_TOKEN`. Test the harness without
+contacting a model:
 
 ```bash
 .venv/bin/python scripts/run_claude.py S01 --model EXACT_MODEL_ID --temperature cold --dry-run

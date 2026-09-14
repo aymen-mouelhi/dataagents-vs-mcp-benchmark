@@ -31,6 +31,9 @@
 - Public source: `aymen-mouelhi/northstar-labs-support-fixture`
 - Canonical open corpus: 40 issues (30 incidents, 10 controls)
 - Cleanup: 19 duplicates from an interrupted seed attempt were closed and are excluded by the frozen `state=open` filter.
+- Claude Code's official GitHub MCP is connected through its read-only endpoint,
+  limited to the `repos,issues` toolsets. The existing GitHub CLI credential is
+  resolved in memory and is not stored in the repository.
 
 ### Stripe sandbox — passed
 
@@ -87,6 +90,9 @@ None filed. The CRM result is an external authentication/provisioning block, not
   reported all three 120-record collections during the stale UI interval.
 - Stripe API search indexing lagged the list API immediately after seeding; no
   browser console failure was observed during key creation.
+- GitHub's OAuth path failed because its auth server does not support dynamic
+  client registration. The supported bearer-token path with the official
+  read-only endpoint connected successfully.
 
 ## Performance telemetry
 

@@ -2,6 +2,8 @@
 """Run one frozen task in Claude Code and preserve raw JSON telemetry."""
 import argparse
 import json
+import os
+import shutil
 import subprocess
 import time
 import uuid
@@ -20,6 +22,21 @@ def utc_now():
 def load_task(task_id):
     tasks = yaml.safe_load((ROOT / "protocol" / "tasks.yaml").read_text())["tasks"]
     return next((task for task in tasks if task["id"] == task_id), None)
+
+
+def runner_environment():
+    """Resolve the existing GitHub CLI credential without persisting it."""
+    env = os.environ.copy()
+    if not env.get("GITHUB_TOKEN") and shutil.which("gh"):
+        try:
+            env["GITHUB_TOKEN"] = subprocess.check_output(
+                ["gh", "auth", "token"], text=True, stderr=subprocess.DEVNULL
+            ).strip()
+        except subprocess.CalledProcessError:
+            pass
+    if not env.get("GITHUB_TOKEN"):
+        raise SystemExit("GITHUB_TOKEN is required (or authenticate the GitHub CLI with `gh auth login`)")
+    return env
 
 
 def main():
@@ -50,7 +67,10 @@ def main():
     start = time.monotonic_ns()
     status, error = "ok", None
     try:
-        completed = subprocess.run(command, cwd=ROOT, text=True, capture_output=True, timeout=args.timeout)
+        completed = subprocess.run(
+            command, cwd=ROOT, text=True, capture_output=True,
+            timeout=args.timeout, env=runner_environment(),
+        )
         if completed.returncode:
             status, error = "error", completed.stderr[-4000:]
     except subprocess.TimeoutExpired as exc:

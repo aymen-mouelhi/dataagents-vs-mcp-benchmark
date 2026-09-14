@@ -1,0 +1,9 @@
+{
+  "task_id": "S01",
+  "currency": "EUR",
+  "recognized_revenue_cents": 6788000,
+  "recognized_revenue_display": "EUR 67,880.00",
+  "period": "2026-07",
+  "tolerance_cents": 0,
+  "required_sources": ["stripe"]
+}

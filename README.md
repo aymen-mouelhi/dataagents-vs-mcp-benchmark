@@ -47,7 +47,7 @@ fresh immutable run ID. Test the harness without contacting a model:
 - [x] Unified run telemetry schema
 - [x] Neon project provisioned in Frankfurt and seeded (project `solitary-credit-82809008`)
 - [x] Pipedrive trial seeded and verified (120 organizations, people, and deals)
-- [ ] Stripe test-mode account
+- [x] Stripe sandbox seeded and verified (120 customers, 117 subscriptions, 240 paid invoices)
 - [x] Support source selected: public GitHub Issues fixture
 - [ ] DataAgents adapter
 - [x] Claude Code MCP configuration and raw-event runner
@@ -65,3 +65,12 @@ and 42,000 product events. Credentials remain private and are not committed.
 The support fixture is publicly inspectable at
 [`aymen-mouelhi/northstar-labs-support-fixture`](https://github.com/aymen-mouelhi/northstar-labs-support-fixture).
 Only open issues belong to the scored corpus.
+
+The Stripe reference estate is isolated in the existing `Revydo sandbox` and
+was seeded with a restricted test key. Its authoritative list API reports three
+products, three prices, 120 customers, 117 trialing subscriptions, and 240 paid
+historical invoices. No live-mode object or real payment was used.
+
+The benchmark's setup, sync, transformation-reuse, freshness, monitoring, and
+cost clocks are defined in [protocol/measurement-plan.md](protocol/measurement-plan.md).
+The public change replay is frozen in [protocol/mutations.yaml](protocol/mutations.yaml).

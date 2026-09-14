@@ -90,24 +90,29 @@ def main():
     for fixture in invoices:
         found = stripe.Invoice.search(query=f"metadata['benchmark_invoice_id']:'{fixture['invoice_id']}'", limit=1)
         if found.data:
-            continue
-        stripe.InvoiceItem.create(
-            customer=customer_ids[fixture["account_id"]],
-            amount=int(fixture["amount_paid_cents"]), currency="eur",
-            description=f"Northstar subscription - {fixture['period_start'][:7]}",
-            metadata={"benchmark_invoice_id": fixture["invoice_id"], "benchmark_account_id": fixture["account_id"]},
-        )
-        invoice = stripe.Invoice.create(
-            customer=customer_ids[fixture["account_id"]], auto_advance=False,
-            collection_method="send_invoice", days_until_due=30,
-            metadata={"benchmark_invoice_id": fixture["invoice_id"],
-                      "benchmark_account_id": fixture["account_id"],
-                      "benchmark_period": fixture["period_start"][:7],
-                      "benchmark_refunded_cents": fixture["refunded_cents"],
-                      "fixture_version": "0.1.0"},
-        )
-        stripe.Invoice.finalize_invoice(invoice.id)
-        stripe.Invoice.pay(invoice.id, paid_out_of_band=True)
+            # Search results can be thin objects depending on the Stripe API
+            # version, so retrieve before inspecting lifecycle fields.
+            invoice = stripe.Invoice.retrieve(found.data[0].id)
+        else:
+            stripe.InvoiceItem.create(
+                customer=customer_ids[fixture["account_id"]],
+                amount=int(fixture["amount_paid_cents"]), currency="eur",
+                description=f"Northstar subscription - {fixture['period_start'][:7]}",
+                metadata={"benchmark_invoice_id": fixture["invoice_id"], "benchmark_account_id": fixture["account_id"]},
+            )
+            invoice = stripe.Invoice.create(
+                customer=customer_ids[fixture["account_id"]], auto_advance=False,
+                collection_method="send_invoice", days_until_due=30,
+                metadata={"benchmark_invoice_id": fixture["invoice_id"],
+                          "benchmark_account_id": fixture["account_id"],
+                          "benchmark_period": fixture["period_start"][:7],
+                          "benchmark_refunded_cents": fixture["refunded_cents"],
+                          "fixture_version": "0.1.0"},
+            )
+        if invoice.status == "draft":
+            invoice = stripe.Invoice.finalize_invoice(invoice.id)
+        if invoice.status != "paid":
+            stripe.Invoice.pay(invoice.id, paid_out_of_band=True)
     out = ROOT / "artifacts" / "private"
     out.mkdir(parents=True, exist_ok=True)
     (out / "stripe_seed_map.json").write_text(json.dumps(created, indent=2) + "\n")

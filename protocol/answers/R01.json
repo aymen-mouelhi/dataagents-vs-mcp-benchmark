@@ -1,0 +1,10 @@
+{
+  "task_id": "R01",
+  "root_cause": "A bulk_export incident reduced activity for the affected Enterprise cohort while subscriptions remained active.",
+  "affected_accounts": 10,
+  "affected_condition": "Enterprise account ordinal divisible by 4",
+  "baseline_daily_events_per_account": 14,
+  "incident_daily_events_per_account": 2,
+  "decline_fraction": 0.8571428571,
+  "required_sources": ["neon", "stripe", "github", "pipedrive"]
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "A01",
+  "incident_id": "incident_usage_collapse",
+  "actionable_conclusion": "Investigate the bulk_export failure affecting 10 Enterprise accounts; product activity fell 85.7% while their subscriptions remained active.",
+  "affected_accounts": 10,
+  "minimum_required_facts": [
+    "Enterprise cohort",
+    "bulk_export",
+    "usage decline",
+    "billing population stable"
+  ],
+  "alert_sla_seconds": 3600,
+  "required_sources": ["neon", "stripe", "github", "pipedrive"]
+}

@@ -17,10 +17,10 @@ tasks:
     answer_key: answers/R01.json
   - id: F01
     category: freshness
-    prompt: How many active Enterprise customers have had no product activity in the last seven days?
+    prompt: As of 2026-08-15, how many active Enterprise customers had at least an 80% decline in daily product events during 2026-08-05 through 2026-08-14 versus 2026-07-29 through 2026-08-04, and what support issue do they have in common?
     answer_key: answers/F01.json
   - id: A01
     category: autonomous
     prompt: null
-    incident_id: incident_refund_spike
+    incident_id: incident_usage_collapse
     answer_key: answers/A01.json

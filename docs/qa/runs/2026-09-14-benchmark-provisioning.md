@@ -32,11 +32,20 @@
 - Canonical open corpus: 40 issues (30 incidents, 10 controls)
 - Cleanup: 19 duplicates from an interrupted seed attempt were closed and are excluded by the frozen `state=open` filter.
 
-### Stripe sandbox — prepared, not seeded
+### Stripe sandbox — passed
 
 - Existing test account: `Revydo sandbox` (`acct_1UBaBvDhuRdfwuUP`)
-- Seeder and safety gates are ready.
-- Intentionally not performed: seeding awaits a new restricted test credential or explicit Stripe MCP OAuth authorization.
+- Created a benchmark-only restricted test credential with write access limited
+  to Customers, Products, Prices, Subscriptions, and Invoices.
+- The seeder rejected live keys by construction and created no live-mode objects.
+- Verified through the authoritative list API: 3 products, 3 prices, 120
+  customers, 117 subscriptions, and 240 paid historical invoices.
+- Stripe search indexing exposed 237 and then 238 invoices immediately after the
+  seed while the authoritative list endpoint already returned all 240. This is
+  recorded as provider search-readiness lag, not fixture loss.
+- An idempotency defect discovered during the first pass was fixed: the seeder
+  now retrieves thin search results, resumes draft invoices, and pays only when
+  invoice status is not already `paid`.
 
 ### CRM — passed
 
@@ -61,7 +70,9 @@ None filed. The CRM result is an external authentication/provisioning block, not
 ## Cleanup and side effects
 
 - Closed 19 duplicate GitHub fixture issues.
-- No payment, invitation, external send, or production mutation occurred.
+- Created 120 Stripe sandbox customers, 117 trialing subscriptions, 3 products,
+  3 prices, and 240 paid-out-of-band historical invoices.
+- No live payment, invitation, external send, or production mutation occurred.
 
 ## Console/network evidence
 
@@ -74,6 +85,8 @@ None filed. The CRM result is an external authentication/provisioning block, not
 - The contact-list UI initially displayed a stale zero count immediately after
   API seeding, then displayed 120 after a page refresh. The direct API already
   reported all three 120-record collections during the stale UI interval.
+- Stripe API search indexing lagged the list API immediately after seeding; no
+  browser console failure was observed during key creation.
 
 ## Performance telemetry
 

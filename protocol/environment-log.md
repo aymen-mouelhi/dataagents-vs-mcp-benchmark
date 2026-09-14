@@ -24,7 +24,14 @@ Database credentials and provider-generated passwords are excluded from git.
 - No live-mode operations are permitted by the seeder
 - Test clocks excluded from the primary corpus because they cap simulations at
   three customers and omit generated invoices from ordinary unscoped lists
-- Seeding pending a new restricted sandbox credential or Stripe MCP OAuth grant
+- Created a benchmark-only restricted test key with write access limited to
+  Customers, Products, Prices, Subscriptions, and Invoices
+- Seeded and verified through the authoritative list API: 3 products, 3 prices,
+  120 customers, 117 subscriptions, and 240 paid invoices
+- Stripe search indexing briefly lagged the authoritative list API after the
+  seed; this was treated as readiness/freshness evidence rather than a missing row
+- Restricted credentials and provider object mappings remain private and are
+  excluded from git
 
 ## 2026-09-14 - Support source
 

@@ -1,0 +1,50 @@
+version: 0.1.0-draft
+poll_offsets_seconds: [15, 60, 300, 900, 3600]
+mutations:
+  - id: M01_new_enterprise_customer
+    kind: insert_cross_source
+    sources: [pipedrive, stripe, neon]
+    description: Add one Enterprise account, its contact and won deal, an active subscription, and initial product activity.
+    expected:
+      identity_matches: 1
+      orphan_entities: 0
+  - id: M02_late_usage_events
+    kind: late_arrival
+    sources: [neon]
+    description: Insert product events whose occurred_at precedes their received_at by 48 hours.
+    expected:
+      event_time_metrics_restate: true
+      ingestion_time_is_preserved: true
+  - id: M03_refund_correction
+    kind: update
+    sources: [stripe]
+    description: Apply the frozen refund correction and verify segment-level revenue and refund metrics restate.
+    expected:
+      affected_task_ids: [S01, X01]
+  - id: M04_crm_correction
+    kind: update
+    sources: [pipedrive]
+    description: Correct one deal stage and expected MRR without changing its canonical account mapping.
+    expected:
+      affected_task_ids: [X02]
+  - id: M05_support_incident
+    kind: insert_incident
+    sources: [github]
+    description: Publish the frozen bulk-export support-ticket cohort without sending an investigative prompt.
+    expected:
+      incident_id: incident_usage_collapse
+      affected_segment: Enterprise
+  - id: M06_nullable_field
+    kind: additive_schema_change
+    sources: [neon]
+    description: Add and populate a nullable deployment_region field, leaving existing records valid.
+    expected:
+      existing_transforms_continue: true
+      new_field_discoverable: true
+  - id: M07_delete_test_account
+    kind: deletion
+    sources: [pipedrive, stripe, neon]
+    description: Delete the benchmark-only account introduced in M01 and measure propagation.
+    expected:
+      removed_from_active_metrics: true
+      deletion_traceable: true

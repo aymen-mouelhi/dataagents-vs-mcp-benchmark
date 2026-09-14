@@ -1,0 +1,9 @@
+{
+  "task_id": "X02",
+  "account_ids": ["acct_0017", "acct_0053", "acct_0101"],
+  "deal_ids": ["deal_0017", "deal_0053", "deal_0101"],
+  "expected_mrr_cents": 149700,
+  "currency": "EUR",
+  "tolerance_cents": 0,
+  "required_sources": ["pipedrive", "stripe"]
+}

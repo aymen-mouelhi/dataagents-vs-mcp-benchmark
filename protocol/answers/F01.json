@@ -1,0 +1,9 @@
+{
+  "task_id": "F01",
+  "affected_active_enterprise_customers": 10,
+  "threshold_decline_fraction": 0.8,
+  "common_support_issue": "Bulk export fails",
+  "baseline_window": ["2026-07-29", "2026-08-04"],
+  "comparison_window": ["2026-08-05", "2026-08-14"],
+  "required_sources": ["neon", "stripe", "github", "pipedrive"]
+}

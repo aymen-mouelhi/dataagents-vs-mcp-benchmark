@@ -1,0 +1,11 @@
+{
+  "task_id": "X01",
+  "conclusion": "Enterprise",
+  "august_refunded_cents": 899000,
+  "affected_accounts": 10,
+  "evidence": {
+    "common_product_cohort": "bulk_export",
+    "common_support_subject": "Bulk export fails"
+  },
+  "required_sources": ["stripe", "neon", "github", "pipedrive"]
+}
